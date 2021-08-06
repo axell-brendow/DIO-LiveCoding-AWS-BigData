@@ -37,4 +37,12 @@ Neste repositório há os arquivos de configuração e execução de análise de
   * _nano ~/.mrjob.conf_
   * _python3 dio-live-wordcount-test.py -r emr s3://{your_s3_bucket_name}/data/SherlockHolmes.txt --output-dir=s3://{your_s3_bucket_name}/output/logs1 --cloud-tmp-dir=s3://{your_s3_bucket_name}/temp/_
 
+Exemplo:
 
+```sh
+python dio-live-wordcount-test.py -r emr \
+    s3://dio-live-datalake-axell/data/sherlock.txt \
+    --output-dir=s3://dio-live-datalake-axell/output/logs-01 \
+    --cloud-tmp-dir=s3://dio-live-datalake-axell/temp/ \
+    --conf-path=./mrjob.conf
+```
